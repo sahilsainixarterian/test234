@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+
+<head>
+  <title>Icons</title>
+  <style>
+.cross-list {
+  list-style: none; /* Remove default list styling */
+  padding: 0;
+  margin: 0;
+}
+
+.cross-list li {
+  position: relative; /* Enable positioning for pseudo-element */
+  padding-left: 25px; /* Add space for the icon */
+}
+
+.cross-list li::before {
+  content: "✖"; /* Unicode or text for checkmark */
+  color: red; /* Set the color for the checkmark */
+  font-size: 16px; /* Adjust size as needed */
+  position: absolute;
+  left: 0; /* Position at the start of the list item */
+  top: 50%;
+  transform: translateY(-50%); /* Center vertically */
+}
+  </style>
+</head>
+
+<body>
+  <ul class="cross-list">
+    <li>Item 1</li>
+    <li>Item 2</li>
+    <li>Item 3</li>
+    <li>Item 2</li>
+    <li>Item 3</li>
+  </ul>
+</body>
+</html>

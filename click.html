@@ -1,0 +1,34 @@
+<style>
+    .DI {
+    margin: 10px 0px;
+    text-align: center
+}
+input.iti-btn {
+    margin: 10px 0px;
+}
+.main-btn {
+    text-align: center;
+}
+select#filename{
+    color: black;
+        border: 2px solid #565656;
+}
+
+</style>
+
+
+<div class="DI"><h3 for="iti...">Download Itinerary</h3></div>
+
+<form id="msform1" onsubmit="this.action = document.getElementById('filename').value">
+    <select id="filename">
+        <option value="" disabled selected> Choose your tour package</option>
+        <option value="https://viacation.com/wp-content/uploads/2025/01/Mini-Kerala.pdf"> Mini Kerala </option>
+        <option value="https://viacation.com/wp-content/uploads/2025/01/Amazing-Andaman–-4-Nights_-5-Days.pdf"> Andaman & Nicobar</option>
+        <!-- <option value="https://viacation.com/wp-content/uploads/2025/01/Delightful-Kashmir.pdf"> Delightful Kashmir</option> -->
+        <option value="https://viacation.com/wp-content/uploads/2025/01/Golden-Triangle.pdf"> Golden-Triangle</option>
+        <option value="https://viacation.com/wp-content/uploads/2025/01/Magnificent-Ooty-Coorg-–-4-Nights_-5-Days.pdf"> Magnificent Ooty & Coorg</option>
+        <!-- <option value="https://viacation.com/wp-content/uploads/2025/01/Manali-Volvo-Package.pdf"> Manali Volvo Package</option> -->
+
+    </select>
+    <div class="main-btn"> <input type="submit" value="Download Now" class="iti-btn"></div>
+ </form>

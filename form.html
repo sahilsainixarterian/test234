@@ -1,0 +1,351 @@
+<style>
+    .forminator-body {
+        border: 1px solid #cecece;
+        border-radius: 8px;
+        box-shadow: 0px 2px 1px 2px #cecece;
+        background-color: white;
+        z-index: 999;
+    }
+    input[type=text], input[type=number], input[type=email], input[type=tel], input[type=url], input[type=password], input[type=search], textarea, .input-text, select {
+        border-radius: 8px !important;
+    }
+    .phoney-thing {
+        display: none;
+    }
+    .modal {
+        display: none;
+        position: fixed;
+        z-index: 999;
+        padding-top: 100px;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        overflow: auto;
+        background-color: rgba(0, 0, 0, 0.4);
+    }
+    .modal-content {
+        background-color: #fefefe;
+        margin: auto;
+        padding: 0px;
+        border: 1px solid #888;
+        width: 35%;
+    }
+    @media screen and (max-width: 480px) {
+        .forminator-body {
+            display: none;
+        }
+        .phoney-thing {
+            display: block;
+        }
+          .modal-content {
+        background-color: #fefefe;
+        margin: auto;
+        padding: 0px;
+        border: 1px solid #888;
+        width: 95%;
+    }
+    }
+</style>
+
+<div class="forminator-body">
+    <h1 style="text-align:center;color:#333;font-size:22px;padding:20px 0 0;">Tell Us More</h1>
+    <form id="contactForm" style="padding:10px;">
+        <input placeholder="Full Name" type="text" id="name" name="name" style="width:100%;margin-bottom:10px;" required>
+        <!--<input type="text" placeholder="Number Of People:" id="Numberofpeople" name="Numberofpeople" required style="width:49%;float:left;margin-bottom:10px;">-->
+        
+        
+   <select id="Numberofpeople" name="number-people" style="width:49%;float:left;margin-bottom:10px;" required="required">
+                <option value="">Number Of People:</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+                <option value="7">7</option>
+                <option value="8">8</option>
+                <option value="9">9</option>
+                <option value="10">10</option>
+                <option value="11">11</option>
+                <option value="12">12</option>
+                <option value="13">13</option>
+                <option value="14">14</option>
+                <option value="15">15</option>
+            </select>
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        <select id="month" name="month" style="width:49%;float:right;margin-bottom:10px;">
+            <option>Travel Month</option>
+            <option value="january">January</option>
+            <option value="february">February</option>
+            <option value="march">March</option>
+            <option value="april">April</option>
+            <option value="may">May</option>
+            <option value="june">June</option>
+            <option value="july">July</option>
+            <option value="august">August</option>
+            <option value="september">September</option>
+            <option value="october">October</option>
+            <option value="november">November</option>
+            <option value="december">December</option>
+        </select>
+        <br><br>
+        <input type="email" placeholder="Email" id="email" name="email" style="width:100%;margin-bottom:10px;" required>
+        <input type="tel" placeholder="Phone Number" name="phone" class="phone" maxlength="10" style="width:100%;margin-bottom:10px;" required>
+        <input type="button" value="Send OTP" class="send_O" id="sendOtpButton" style="background-color:black;text-align:center;color:white;width:100%;border-radius:8px;padding:10px 20px;margin-bottom:10px;">
+        
+        <div id="verifyForm" style="display:block;margin-bottom:10px;">
+            <label for="otp">Enter OTP:</label>
+            <input type="text" name="otp" class="otp" style="width:100%;margin-bottom:10px;" required>
+            <span id="otpError" style="color:red; display:none;">Incorrect OTP. Please try again.</span>
+        </div>
+        
+        <input type="text" name="website" class="website" value="" style="display:none;" />
+        <input type="submit" value="Submit" style="background-color:#f95636;text-align:center;color:white;width:100%;padding:13px;border-radius:8px;">
+    </form>
+</div>
+
+<div class="phoney-thing zf_button_637550" style="background-color:#f05a27;padding:15px 10px 8px 10px;border-radius:0px;position:fixed;bottom:0px;width:100%;left:0px;z-index:999;">
+    <h5 style="text-align:center;color:white;font-size:16px !important;">Enquire Now</h5>
+</div>
+
+<div id="myModal258contact" class="modal">
+    <div class="modal-content">
+        <div style="background-color:#f05a27;padding:10px 10px 2px 10px;color:white;">
+            <h3 style="text-align:center;color:#333;font-size:22px;color:white;">Tell Us More</h3>
+            <span class="close" style="position: absolute;right: 13px;top: 3px;color:white;">&times;</span>
+        </div>
+        <div style="padding:10px;">
+            <form id="modalContactForm" style="padding:10px;">
+                <input placeholder="Full Name" type="text" id="modalName" name="name" style="width:100%;margin-bottom:10px;" required>
+                <!--<input type="text" placeholder="Number Of People:" id="modalNumberofpeople" name="Numberofpeople" required style="width:100%;margin-bottom:10px;">-->
+                
+                
+                       
+   <select id="modalNumberofpeople" name="Numberofpeople" style="width:100%;margin-bottom:10px;" required="required">
+                <option value="">Number Of People:</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+                <option value="7">7</option>
+                <option value="8">8</option>
+                <option value="9">9</option>
+                <option value="10">10</option>
+                <option value="11">11</option>
+                <option value="12">12</option>
+                <option value="13">13</option>
+                <option value="14">14</option>
+                <option value="15">15</option>
+            </select>
+        
+                
+                
+                
+                <select id="modalMonth" name="month" style="width:100%;margin-bottom:10px;">
+                    <option>Travel Month</option>
+                    <option value="january">January</option>
+                    <option value="february">February</option>
+                    <option value="march">March</option>
+                    <option value="april">April</option>
+                    <option value="may">May</option>
+                    <option value="june">June</option>
+                    <option value="july">July</option>
+                    <option value="august">August</option>
+                    <option value="september">September</option>
+                    <option value="october">October</option>
+                    <option value="november">November</option>
+                    <option value="december">December</option>
+                </select>
+                <br>
+                <input type="email" placeholder="Email" id="modalEmail" name="email" style="width:100%;margin-bottom:10px;" required>
+                <input type="tel" placeholder="Phone Number" name="phone" class="modalPhone" maxlength="10" style="width:100%;margin-bottom:10px;" required>
+                <input type="button" value="Send OTP" class="send_O" id="sendModalOtpButton" style="background-color:black;text-align:center;color:white;width:100%;border-radius:8px;padding:10px 20px;margin-bottom:10px;">
+                
+                <div id="VerifyForm" style="display:none;margin-bottom:10px;">
+                    <label for="otp">Enter OTP:</label>
+                    <input type="text" name="otp" class="modalOtp" style="width:100%;margin-bottom:10px;" required>
+                    <span id="modalOtpError" style="color:red; display:none;">Incorrect OTP. Please try again.</span>
+                </div>
+                
+                <input type="text" name="website" class="website2" value="" style="display:none;" />
+                <input type="submit" value="Submit" style="background-color:#f95636;text-align:center;color:white;width:100%;padding:13px;border-radius:8px;">
+            </form>
+        </div>
+    </div>
+</div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<script>
+   // var fixmeTop = $('.forminator-body').offset().top;
+
+   // $(window).scroll(function() {
+   //     var currentScroll = $(window).scrollTop();
+   //     if (currentScroll >= fixmeTop) {
+    //        $('.forminator-body').css({
+     //           position: 'fixed',
+     //           top: '8%',
+      //          right: '5',
+      //          width: '22.8%'
+      //      });
+      //  } else {
+      //      $('.forminator-body').css({
+       //         position: 'static',
+       //         width: '100%'
+       //     });
+       // }
+   // });
+
+    var modal = document.getElementById("myModal258contact");
+    
+    function showZForm_637550() {
+        modal.style.display = "block";
+    }
+
+    document.querySelectorAll('.zf_button_637550').forEach(function(button) {
+        button.addEventListener("click", showZForm_637550);
+    });
+
+    var span = document.getElementsByClassName("close")[0];
+    span.onclick = function() {
+        modal.style.display = "none";
+    }
+    
+    window.onclick = function(event) {
+        if (event.target == modal) {
+            modal.style.display = "none";
+        }
+    }
+
+      const currentUrl = window.location.href.split('?')[0];
+document.querySelector('.website2').value = currentUrl;
+document.querySelector('.website').value = currentUrl;
+
+    document.querySelectorAll('#sendOtpButton, #sendModalOtpButton').forEach(function(button) {
+        button.addEventListener('click', function() {
+            const phone = this.closest('form').querySelector('.phone, .modalPhone').value;
+
+            fetch('/wp-content/themes/havezic/send_otp.php', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/x-www-form-urlencoded',
+                },
+                body: new URLSearchParams({ mobile: phone }) 
+            })
+            .then(response => response.json())
+            .then(result => {
+                if (result.type === 'success') {
+                    this.closest('form').querySelectorAll('[id*="VerifyForm"]').forEach(function(verifyForm) {
+                        verifyForm.style.display = 'block';
+                    });
+                } else {
+                    alert('Error sending OTP: ' + result.error);
+                }
+            })
+            .catch(error => {
+                console.error('Error:', error);
+                alert('There was an error. Please try again.');
+            });
+        });
+    });
+
+    document.getElementById('modalContactForm').addEventListener('submit', function(event) {
+        event.preventDefault();
+
+        const otp = document.querySelector('.modalOtp').value;
+        const phoneNumber = this.querySelector('.modalPhone').value;
+
+        fetch(`/wp-content/themes/havezic/send_otp.php?otp=${otp}&mobile=${phoneNumber}`)
+            .then(response => response.json())
+            .then(result => {
+                if (result.type === 'success') {
+                    const formData = new FormData(this);
+                    const data = {};
+                    formData.forEach((value, key) => { data[key] = value });
+
+                    fetch('/wp-content/themes/havezic/send_to_zoho.php', {
+                        method: 'POST',
+                        headers: {
+                            'Content-Type': 'application/json'
+                        },
+                        body: JSON.stringify(data)
+                    })
+                    .then(response => {
+                        if (!response.ok) {
+                            throw new Error(response.statusText);
+                        }
+                        return response.json();
+                    })
+                    .then(result => {
+                        window.location.href = '/thankyou/';
+                    })
+                    .catch(error => {
+                        console.error('Error:', error);
+                        alert('There was an error submitting the form.');
+                    });
+                } else {
+                    document.getElementById('modalOtpError').style.display = 'block';
+                }
+            })
+            .catch(error => {
+                console.error('Error:', error);
+                alert('There was an error verifying the OTP. Please try again.');
+            });
+    });
+
+    document.getElementById('contactForm').addEventListener('submit', function(event) {
+        event.preventDefault();
+
+        const otp = document.querySelector('input[name="otp"]').value;
+        const phoneNumber = this.querySelector('.phone').value;
+
+        fetch(`/wp-content/themes/havezic/send_otp.php?otp=${otp}&mobile=${phoneNumber}`)
+            .then(response => response.json())
+            .then(result => {
+                if (result.type === 'success') {
+                    const formData = new FormData(this);
+                    const data = {};
+                    formData.forEach((value, key) => { data[key] = value });
+
+                    fetch('/wp-content/themes/havezic/send_to_zoho.php', {
+                        method: 'POST',
+                        headers: {
+                            'Content-Type': 'application/json'
+                        },
+                        body: JSON.stringify(data)
+                    })
+                    .then(response => {
+                        if (!response.ok) {
+                            throw new Error(response.statusText);
+                        }
+                        return response.json();
+                    })
+                    .then(result => {
+                        window.location.href = '/thankyou/';
+                    })
+                    .catch(error => {
+                        console.error('Error:', error);
+                        alert('There was an error submitting the form.');
+                    });
+                } else {
+                    document.getElementById('otpError').style.display = 'block';
+                }
+            })
+            .catch(error => {
+                console.error('Error:', error);
+                alert('There was an error verifying the OTP. Please try again.');
+            });
+    });
+</script>

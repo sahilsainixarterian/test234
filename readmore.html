@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Read More Toggle</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
+      margin: 20px;
+    }
+
+    .content {
+      display: none; /* Hide the full content initially */
+    }
+
+    .read-more-btn {
+      color: blue;
+      cursor: pointer;
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+  <div id="travelContent">
+    <p>Paris</p>
+    <ul>
+      <li>Guided City Tour</li>
+      <li>Visit Eiffel Tower – 2nd level</li>
+      <li>Seine River Cruise</li>
+      <li>Evening Illumination Tour of Paris</li>
+      <li>Disneyland Paris (1 Day / 1 Park)</li>
+    </ul>
+
+    <p>Brussels</p>
+    <ul>
+      <li>Visit Grand Place</li>
+      <li>Orientation Tour</li>
+      <li>Photo Stop at Atomium</li>
+    </ul>
+
+    <p id="visibleEnd">Cologne</p>
+    <ul>
+      <li>View Cologne Cathedral</li>
+    </ul>
+
+    <div id="hiddenContent" class="content">
+      <p>Amsterdam</p>
+      <ul>
+        <li>Keukenhof Gardens (up to 11 May) OR Madurodam (after 11 May)</li>
+        <li>Visit Zaanse Schans, Dam Square</li>
+        <li>Canal Cruise</li>
+      </ul>
+
+      <p>Boppard</p>
+      <ul>
+        <li>Rhine River Cruise (Boppard to St. Goar)</li>
+      </ul>
+
+      <p>Heidelberg</p>
+      <ul>
+        <li>Orientation Tour</li>
+      </ul>
+
+      <!-- Add more as per your content -->
+      <p>Vatican City</p>
+      <ul>
+        <li>Visit Vatican Museum and Sistine Chapel</li>
+        <li>Visit St. Peter’s Basilica</li>
+      </ul>
+    </div>
+
+    <span id="toggleButton" class="read-more-btn">Read More</span>
+  </div>
+
+  <script>
+    const toggleButton = document.getElementById("toggleButton");
+    const hiddenContent = document.getElementById("hiddenContent");
+
+    toggleButton.addEventListener("click", () => {
+      if (hiddenContent.style.display === "none" || hiddenContent.style.display === "") {
+        hiddenContent.style.display = "block"; // Show content
+        toggleButton.textContent = "Read Less"; // Change button text
+      } else {
+        hiddenContent.style.display = "none"; // Hide content
+        toggleButton.textContent = "Read More"; // Reset button text
+      }
+    });
+
+    // Ensure hidden content is hidden initially
+    hiddenContent.style.display = "none";
+  </script>
+</body>
+</html>
